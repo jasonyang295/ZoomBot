@@ -48,4 +48,11 @@ def sign_in(meetingid, pwd):
             time.sleep(2)
             #delays for 2 seconds before repeating
 
+
+now = datetime.datetime.now()
+
+current_time = (now.strftime("%m-%d-%y %H:%M"))
+#example imput: 05-20-21 22:16
+
+
 sign_in(4815396307, 123456)
