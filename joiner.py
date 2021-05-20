@@ -17,11 +17,22 @@ def sign_in(meetingid, pwd):
         joinbutton = pyautogui.locateOnScreen('joinbutton.png')
         if joinbutton != None:
             pyautogui.click(joinbutton)
-            print("Clicked the Join Button on Zoom")
+            print("Found and clicked the Join Button on Zoom")
             break
         else: 
             print("Could not locate join button on Zoom")
             time.sleep(2)
             #delays for 2 seconds before repeating
-
+    while True:
+        field = pyautogui.locateOnScreen('field.png')
+        if field != None:
+            pyautogui.click(field)
+            print("Found the enter field into location on Zoom")
+            pyautogui.typewrite(id)
+            
+            break
+        else: 
+            print("Could not locate field info on Zoom")
+            time.sleep(2)
+            #delays for 2 seconds before repeating
 sign_in(95200673544, 7377384)
