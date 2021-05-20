@@ -21,5 +21,7 @@ def sign_in(meetingid, pwd):
             break
         else: 
             print("Could not locate join button on Zoom")
+            time.sleep(2)
+            #delays for 2 seconds before repeating
 
 sign_in(95200673544, 7377384)
