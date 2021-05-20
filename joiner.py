@@ -5,8 +5,8 @@ import pandas as pd
 from datetime import datetime
 
 #temporary login creds: 
-#id: 95200673544
-#pwd: 7377384
+#id: 4815396307
+#pwd: 123456
 
 def sign_in(meetingid, pwd):
     #initiates the zoom app 
@@ -29,10 +29,23 @@ def sign_in(meetingid, pwd):
             pyautogui.click(field)
             print("Found the enter field into location on Zoom")
             pyautogui.typewrite(id)
-            
+            pyautogui.click(pyautogui.locateOnScreen('joinbutton2.png'))
             break
         else: 
             print("Could not locate field info on Zoom")
             time.sleep(2)
             #delays for 2 seconds before repeating
-sign_in(95200673544, 7377384)
+    while True:
+        field2 = pyautogui.locateOnScreen('field2.png')
+        if field2 != None:
+            pyautogui.click(field2)
+            print("Found the enter password location on Zoom")
+            pyautogui.typewrite(pwd) #enters password
+            pyautogui.click(pyautogui.locateOnScreen('joinmeeting.png')) #joins meeting
+            break
+        else: 
+            print("Could not locate password field on Zoom")
+            time.sleep(2)
+            #delays for 2 seconds before repeating
+
+sign_in(4815396307, 123456)
