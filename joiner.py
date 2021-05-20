@@ -49,10 +49,19 @@ def sign_in(meetingid, pwd):
             #delays for 2 seconds before repeating
 
 
-now = datetime.datetime.now()
+while True:
+    now = datetime.datetime.now()
 
-current_time = (now.strftime("%m-%d-%y %H:%M"))
-#example imput: 05-20-21 22:16
+    current_time = (now.strftime("%m-%d-%y %H:%M"))
+    #example imput: 05-20-21 22:16
+
+    if current_time == "05-20-21 15:30":
+        sign_in(4815396307, 123456)
+        break
+    else:
+        print("It's not the right time")
+        time.sleep(10)
 
 
-sign_in(4815396307, 123456)
+
+
