@@ -49,19 +49,40 @@ def sign_in(id, pwd):
             #delays for 2 seconds before repeating
 
 
+#ONLY MODIFY THIS FOLLOWING SECTION FOR PERSONAL USE!!!!!
+#
+#
+#
+#
+#
+#
+#
+#
+#
+#
+#
+
 while True:
     now = datetime.now()
 
-    current_time = (now.strftime("%m-%d-%y %H:%M"))
+    current_time = (now.strftime("%m-%d-%y %H:%M")) #times should be filled in this format: month, day, year --- hour:min
     #example imput: 05-20-21 22:16
 
-    if current_time == "05-20-21 15:40":
-        sign_in(4815396307, 123456)
+    if current_time == "05-20-21 15:40": #MODIFY THIS FOR PERSONAL USE
+        sign_in(4815396307, 123456) #REPLACE THESE TWO WITH ID AND PWD
         break
     else:
         print("It's not the right time")
         time.sleep(10)
 
+#AFTER FILLING IN EVERYTHING RUN THE CODE ACCRORDING TO README
+#
+#
+#
+#
+#
+#
+#
 
 
 
