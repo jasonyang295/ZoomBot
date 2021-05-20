@@ -8,7 +8,7 @@ from datetime import datetime
 #id: 4815396307
 #pwd: 123456
 
-def sign_in(meetingid, pwd):
+def sign_in(id, pwd):
     #initiates the zoom app 
     subprocess.call("C:\\Users\\canyo\\AppData\\Roaming\\Zoom\\bin\\Zoom.exe")
     #print("hello")
@@ -50,12 +50,12 @@ def sign_in(meetingid, pwd):
 
 
 while True:
-    now = datetime.datetime.now()
+    now = datetime.now()
 
     current_time = (now.strftime("%m-%d-%y %H:%M"))
     #example imput: 05-20-21 22:16
 
-    if current_time == "05-20-21 15:30":
+    if current_time == "05-20-21 15:40":
         sign_in(4815396307, 123456)
         break
     else:
