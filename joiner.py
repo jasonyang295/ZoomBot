@@ -68,7 +68,7 @@ while True:
     current_time = (now.strftime("%m-%d-%y %H:%M")) #times should be filled in this format: month, day, year --- hour:min
     #example imput: 05-20-21 22:16
 
-    if current_time == "05-20-21 15:55": #MODIFY THIS FOR PERSONAL USE
+    if current_time == "05-21-21 12:16": #MODIFY THIS FOR PERSONAL USE
         sign_in("4815396307", "123456") #REPLACE THESE TWO WITH ID AND PWD. MAKE SURE THEY'RE PRESENTED IN STRING FORM
         break
     else:
